@@ -1,14 +1,22 @@
 /* CSS Document */
 
-.delay{
-	-webkit-animation-delay:1s;
-	}
+
 .delay1{
-	-webkit-animation-delay:1.5s;
-	}
+	-webkit-animation-delay:1s;
+}
 .delay2{
-	-webkit-animation-delay:.5s;
-	}
+	-webkit-animation-delay:1.5s;
+}
+.delay3{
+	-webkit-animation-delay:2s;
+}
+.delay4{
+	-webkit-animation-delay:2.5s;
+}
+
+.line_delay{
+	-webkit-animation-delay:3s;
+}
 
 
 .animated_time {
