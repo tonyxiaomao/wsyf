@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+    <head>
+        <title>万晟悦府-照片墙</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+        <meta name="msapplication-TileColor" content="#0e90d2">
+        <link rel="stylesheet" type="text/css" href="css/all.css">      
+    </head>
+    <body class="photowall">
+        <p>点击图片看大图</p>
+        <div class="photo_list">
+            <ul class="left_list">
+                <li>
+                    <figure>
+                        <img src="../images/photowall/1.jpg">
+                        <figcaption>
+                            美好的开始，早！
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="../images/photowall/2.jpg">
+                        <figcaption>
+                            一流的物业，保驾护航
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="../images/photowall/3.jpg">
+                        <figcaption>
+                            空中无边界泳池，天水合一
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="../images/photowall/4.jpg">
+                        <figcaption>
+                            两大会所，奢华顶配
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="../images/photowall/5.jpg">
+                        <figcaption>
+                            夜景
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="../images/photowall/6.jpg">
+                        <figcaption>
+                            会稽山
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+            <ul class="right_list">
+                <li>
+                    <figure>
+                        <img src="../images/photowall/7.jpg">
+                        <figcaption>
+                            二期
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="../images/photowall/8.jpg">
+                        <figcaption>
+                            二期四联
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="../images/photowall/9.jpg">
+                        <figcaption>
+                            九亩花田，生态农庄
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="../images/photowall/10.jpg">
+                        <figcaption>
+                            会所内部，尊贵享受
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="../images/photowall/11.jpg">
+                        <figcaption>
+                            中央院落
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="../images/photowall/12.jpg">
+                        <figcaption>
+                            山地别墅
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
+        <div class="pop_photo">
+             <figure>
+                <img>
+                <figcaption></figcaption>
+            </figure>
+        </div>
+        <div class="pop_mask"></div>
+        <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                var $mask = $(".pop_mask"),
+                    $pop = $(".pop_photo");
+
+                $(".photo_list").on("click", "li", function(){
+                    var $this = $(this),
+                        src = $this.find("img").attr("src"),
+                        desr = $this.find("figcaption").text();
+
+                    $pop.find("img").attr("src", src);
+                    $pop.find("figcaption").text(desr);    
+
+                    $mask.show();
+                    $pop.show();
+                });
+
+                $mask.on("click", function(){
+                    $mask.hide();
+                    $pop.hide();
+                });
+            });
+        </script>
+    </body>
+ </html>
