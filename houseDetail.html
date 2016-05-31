@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>万晟悦府-户型</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="Cache-Control" content="no-siteapp"/>
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+	<meta name="msapplication-TileColor" content="#0e90d2">
+	<link rel="stylesheet" href="css/all.css">
+</head>
+<body class="house_detail">
+	<div class="wrapper">
+		<section class="banner">
+			<img src="images/houseDetail/banner.jpg">
+		</section>
+		<section class="list list1">
+			<ul>
+				<li>
+					<img src="">
+				</li>
+				<li>
+					<img src="">
+				</li>
+				<li>
+					<img src="">
+				</li>
+				<li>
+					<img src="">
+				</li>
+			</ul>
+		</section>
+		<section class="list list2">
+			<ul>
+				<li>
+					<img src="">
+				</li>
+				<li>
+					<img src="">
+				</li>
+				<li>
+					<img src="">
+				</li>
+				<li>
+					<img src="">
+				</li>
+			</ul>
+		</section>
+		<section class="list list3">
+			<ul>
+				<li>
+					<img src="">
+				</li>
+				<li>
+					<img src="">
+				</li>
+				<li>
+					<img src="">
+				</li>
+				<li>
+					<img src="">
+				</li>
+			</ul>
+		</section>
+		<section class="list list4">
+			<ul>
+				<li>
+					<img src="">
+				</li>
+				<li>
+					<img src="">
+				</li>
+				<li>
+					<img src="">
+				</li>
+				<li>
+					<img src="">
+				</li>
+			</ul>
+		</section>
+	</div>
+	<section class="mask">
+		<img src="">
+	</section>
+	<script type="text/javascript">
+		var type = window.location.search.substring(1).split('=')[1],
+			_list = document.querySelectorAll("section.list")[type - 1],
+			_imgs = _list.querySelectorAll("img"),
+			length = _imgs.length,
+			_mask = document.querySelector(".mask"),
+			_img = _mask.querySelector("img");
+
+		for(var i = 0; i < length; i++){
+			(function(i){
+				var src = "images/houseDetail/" + type + '-' + (i + 1) + ".jpg",
+				img = _imgs[i];
+
+				img.addEventListener("click", function(e){
+					_mask.style.display = "block";
+					_img.src = src;
+				});
+				img.src = src;
+			})(i);
+		}
+
+		_mask.addEventListener("click", function(){
+			_img.src = "";
+			this.style.display = "none";
+		});
+
+		_list.style.display = "block";
+
+	</script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>
